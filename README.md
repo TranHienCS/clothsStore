@@ -6,3 +6,7 @@
 - Created init react app
 - Create, clone, commit project on github
 - Complete tutorial of Reactjs (Tic Toc Toe Game)
+#### 13/02/2020
+- Research Nodejs, mongodb
+- Connected Mongodb with Nodejs 
+- Created User, Cloth schema
