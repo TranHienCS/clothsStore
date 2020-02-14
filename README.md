@@ -10,3 +10,7 @@
 - Research Nodejs, mongodb
 - Connected Mongodb with Nodejs 
 - Created User, Cloth schema
+### 14/02/2020
+- Update Category Schema
+- Structuring projects and naming components in React
+- Research Redux
