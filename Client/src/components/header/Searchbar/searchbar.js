@@ -5,7 +5,7 @@ import './searchbar.css';
 class searchbar extends Component {
     render() {
         return (
-            <div className="row">
+            <div className="search ">
                 <input type="text" className="search-input" placeholder="Search"></input>
                 <button className="search-button"><FiSearch/></button>
             </div>

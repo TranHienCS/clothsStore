@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import SearchBar from './Searchbar/searchbar.js';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import Header from './header/header.js';
 class homepage extends Component {
     render() {
         return (
             <div>
-                <SearchBar></SearchBar>
-                <FontAwesomeIcon icon={faCoffee} />
+                <Header></Header>
             </div>
         );
     }

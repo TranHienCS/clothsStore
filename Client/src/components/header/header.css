@@ -1,0 +1,40 @@
+.row{
+    margin-top: 21px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgb(197, 194, 194);
+}
+
+.main-logo{
+    background-image: url(./logo.png) ;
+    height: 100%;
+    background-repeat: no-repeat;
+    width: 96px;
+    margin: 0 auto;
+}
+
+.col-md-5{
+    margin: 'auto';
+    text-align: center;
+}
+
+.btn{
+    /* margin-left: 10px; */
+    padding:0;
+}
+.col-md-3{
+    float:left;
+}
+.col-md-3 button:focus{
+    outline: 0;
+}
+
+.cart{
+    float: right;
+    border:none;
+    background-color: white;
+
+}
+.a{
+ /* float: right; */
+ 
+}

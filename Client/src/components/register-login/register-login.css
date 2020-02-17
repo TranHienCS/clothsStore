@@ -1,0 +1,84 @@
+.register{
+    float: left;
+    background-color: white;
+    border: none;
+    color: gray;
+}
+
+.title{
+    font-weight: bold;
+}
+.info{
+    padding-top: 20px;
+   width: 85%;
+   margin: 0 auto;
+   
+}
+
+.form-group{
+    margin-top: 20px;
+}
+.form-group label{
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    
+}
+.form-group input{
+    border: none;
+    background-color: #f6f6f6;
+}
+
+::placeholder{
+    font-size: 14px;
+    line-height: 22px;
+}
+.policy{
+    padding-top: 20px;
+    width:75%;
+    margin: 0 auto;
+}
+.policy a{
+    color:#ff7413;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.registerbtn{
+    margin-top: 20px;
+    width:100%;
+    height: 50px;
+    background-color:#ffa15f ;
+    border:none;
+   color:white;
+   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+   font-weight: bold;
+}
+
+.isLogin a{
+
+        color:#ff7413;
+        font-weight: bold;
+        text-decoration: underline;
+}
+.ptext{
+    width:100%;
+    margin-top: 60px;
+}
+
+.login{
+    background-color: white;
+    border:1px solid #ff7e24 ;
+    border-radius: 15px;
+    color:#ff7e24;
+    width: 120px;
+}
+.divlogin{
+    width:120px;
+    margin: 0 auto;
+}
+
+.float-right{
+    font-weight: bold;
+    color:black;
+}

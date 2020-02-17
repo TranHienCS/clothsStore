@@ -1,3 +1,8 @@
+/* .search{
+    width: 181px;
+    height: 35px;
+    ;
+} */
 .search-input{
     border-radius: 17px;
     border: solid 1px #b7b7b7;
@@ -17,4 +22,5 @@
     margin-left: -30px;
     background-color: transparent;
     border:none;
+    padding: 0;
 }
