@@ -15,5 +15,7 @@
 - Structuring projects and naming components in React
 - Research Redux
 #### 17/02/2020
-- Design header bar, register, login
+- Design header bar, register, login modal
 - validating register and login
+#### 18/02/2020
+- Design homepage and complete header bar

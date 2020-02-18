@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './formError.css'
 function formError(props){
     if(props.isHidden){return null;}
     return(

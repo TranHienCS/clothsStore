@@ -1,0 +1,43 @@
+.homepage{
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.officalpic{
+    background-image: url(./outfit.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+
+}
+.categorypic{
+    margin-top: 20px;
+    padding:0 !important;
+}
+.pic{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    /* padding:0 !important; */
+}
+.pic1{
+    /* background-image: url(./ladycloth.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pic2{
+    
+    /* background-image: url(./mancloth.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pic3{
+    /* background-image: url(./girlcloth.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pic4{
+    background-image: url(./boycloth.jpg) ;
+    background-position: calc(100% + 50px) center;
+}

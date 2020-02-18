@@ -23,13 +23,13 @@ class login extends Component {
                                     <form>
                                         <div className="form-group">
                                             <label>E-MAIL</label>
-                                            <input type="text" className="form-control" name id aria-describedby="helpId" placeholder="Enter your mail..." />
+                                            <input type="text" className="form-control" placeholder="Enter your mail..." />
                                             {/* <small id="helpId" className="form-text text-muted">Help text</small> */}
                                         </div>
 
                                         <div className="form-group">
                                             <label>PASSWORD</label>
-                                            <input type="password" className="form-control" name id aria-describedby="helpId" placeholder="Enter your password..." />
+                                            <input type="password" className="form-control" placeholder="Enter your password..." />
                                             {/* <small id="helpId" className="form-text text-muted">Help text</small> */}
                                         </div>
                                         <div className="custom-control custom-checkbox w-100">
