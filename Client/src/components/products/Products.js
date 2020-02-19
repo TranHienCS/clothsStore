@@ -32,6 +32,12 @@ class Products extends Component {
                         <div><ProductCard></ProductCard></div>
                         <div><ProductCard></ProductCard></div>
                         <div><ProductCard></ProductCard></div>
+                        <div><ProductCard></ProductCard></div>
+                        <div><ProductCard></ProductCard></div>
+                        <div><ProductCard></ProductCard></div>
+                        <div><ProductCard></ProductCard></div>
+                        <div><ProductCard></ProductCard></div>
+                        <div><ProductCard></ProductCard></div>
                     </div>
                 </div>
             </div>
