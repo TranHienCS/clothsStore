@@ -2,8 +2,13 @@
     width: 85%;
     margin: 0 auto;
     padding-top: 20px;
+    padding-bottom: 50px;
+   
+    
 }
-
+.second{
+    box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.08), 0 -1px 4px 0 rgba(0, 0, 0, 0.08);
+}
 .officalpic{
     background-image: url(./outfit.jpg);
     background-repeat: no-repeat;
@@ -12,32 +17,68 @@
 
 }
 .categorypic{
-    margin-top: 20px;
+    margin-top: 15px;
     padding:0 !important;
 }
 .pic{
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
-    /* padding:0 !important; */
+    padding:0 !important;
 }
 .pic1{
-    /* background-image: url(./ladycloth.jpg); */
+    margin-left: 15px;
+    background-image: url(./ladycloth.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .pic2{
-    
-    /* background-image: url(./mancloth.jpg); */
+    margin-left: 10px;
+    background-image: url(./mancloth.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .pic3{
-    /* background-image: url(./girlcloth.jpg); */
+    margin-left: 10px;
+    background-image: url(./girlcloth.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .pic4{
+    margin-right: 15px;
+    margin-left: 10px;
     background-image: url(./boycloth.jpg) ;
     background-position: calc(100% + 50px) center;
+}
+
+.bottom{
+    text-align: center;
+    width: 80%; 
+    margin: 0 auto;
+    margin-top: 250px;
+}
+.cate{
+    font-family: Domine;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: var(--white);
+    text-shadow: -1px 0 black, 0 1px black,      1px 0 black, 0 -1px black
+}
+
+.line{
+    border: 1px solid rgb(253, 253, 253);
+}
+
+.shop{
+    width: 140px;
+    height: 40px;
+    background-color: #ffa15f;
+    border:none;
+    font-weight: 600;
+    color: white;
 }

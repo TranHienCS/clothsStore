@@ -1,13 +1,21 @@
 import React from 'react';
-import Homepage from './components/homepage/homepage.js'
+import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import RouterURL from './components/router/routerURL.js';
+import Header from './components/header/header.js';
+import Footer from './components/footer/footer.js';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 function App() {
   return (
-    <div className="App">
-      <Homepage></Homepage>
-    </div>
+    <Router>
+      <div className="App">
+        <Header></Header>
+        <RouterURL></RouterURL>
+        <Footer></Footer>
+      </div>
+    </Router>
   );
 }
 

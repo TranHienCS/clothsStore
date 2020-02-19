@@ -125,7 +125,7 @@ class register extends Component {
                       <FormError isHidden={password.isInputValid} errorMessage={password.errorMessage}></FormError>
                     </div>
                     <p className="policy">
-                      By creating an account you agree to the <a href="#a">Terms of Service</a> and <a href="#a">Privacy Policy</a>
+                      By creating an account you agree to the<br></br><a href="#a">Terms of Service</a> and <a href="#a">Privacy Policy</a>
                     </p>
                     <button className="registerbtn" type="submit" onClick={this.validation}>Register</button>
                     <div className="ptext">
@@ -137,7 +137,6 @@ class register extends Component {
                 </div>
 
               </div>
-
             </div>
           </div>
         </div>
