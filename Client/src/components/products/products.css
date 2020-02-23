@@ -4,6 +4,7 @@
     padding: 0 !important;
     margin-top: 80px !important;
     padding-bottom: 50px !important;
+    min-height: 800px;
 }
 .box{
     border-bottom: solid 0.1px rgb(184, 176, 176);
@@ -25,3 +26,6 @@
       font-size: 14px;
   }
 
+  a {
+    text-decoration: none !important;
+}

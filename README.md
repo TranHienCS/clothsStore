@@ -19,3 +19,13 @@
 - validating register and login
 #### 18/02/2020
 - Design homepage and complete header bar
+#### 19/02/2020
+- Completed product list page
+- understand git flow (push, pull request, merge)
+- set up router by react-router-dom
+### 20/02/2020
+- add data to Mongodb
+- Getdata by Nodejs
+### 21/02/2020
+- get data from back-end to front-end
+- completed product-list page
