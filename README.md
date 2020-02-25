@@ -29,3 +29,7 @@
 ### 21/02/2020
 - get data from back-end to front-end
 - completed product-list page
+### 24/02/2020
+- display detait product
+### 25/02/2020
+- set up redux

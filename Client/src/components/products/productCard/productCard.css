@@ -1,10 +1,12 @@
 .product-ca:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 2px -2px gray;
 }
-.card-image-top{
-    background-size: cover;
+.card-img-top{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
-.product-ca{
-    height: 300px !important;
-    width: 170px;
+
+.card-image{
+    height: 270px;
 }

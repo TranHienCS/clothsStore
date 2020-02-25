@@ -12,7 +12,7 @@ const clothSchema = mongoose.Schema({
     dateAdd: Date,
     rate: Number,
     comment: [String],
-    description: String,
+    description: String, 
     
 },{
     collection: 'clothes'

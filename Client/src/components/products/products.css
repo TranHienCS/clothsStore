@@ -8,13 +8,12 @@
 }
 .box{
     border-bottom: solid 0.1px rgb(184, 176, 176);
-
 }
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    grid-gap: 15px;
- 
+    grid-gap: 15px; 
+    grid-template-rows: 350px
   }
 
   .list-cate{
