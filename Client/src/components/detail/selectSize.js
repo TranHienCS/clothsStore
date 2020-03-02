@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {connect} from 'react-redux';
 class selectSize extends Component {
     constructor(props){
         super(props);
@@ -17,11 +17,11 @@ class selectSize extends Component {
         btnsize[0].style.backgroundColor="white";
         btnsize[2].style.backgroundColor="white";
         btnsize[i].style.backgroundColor="tomato"
+        this.props.getSize(size);
     }
 
     render() {
         return (
-            
             <div>
                 <p style={{ marginBottom: '0', fontWeight: 'bold' }}>Size</p>
                 <button name ="size" className="btn-size" onClick={()=>this.selectSize('S',0)}>S</button>

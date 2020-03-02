@@ -17,6 +17,7 @@ class color extends Component {
             }
         btncolor[i].style.width='40px';
         btncolor[i].style.height='40px'
+        this.props.getColor(color);
     
     }
     render() {

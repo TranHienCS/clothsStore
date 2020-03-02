@@ -7,13 +7,21 @@ import {connect} from 'react-redux';
 import SelectSize from './selectSize.js';
 import Color from './color.js';
 import Quantity from './selectQuantity.js';
+import {Link} from 'react-router-dom';
+import carthelper from '../../helper/cart.js';
+import cart from '../cart/cart';
 class detailProduct extends Component {
     constructor(props) {
         super(props);
         this.state = {
             productItem: '',
             counter: 1,
-            index: 0
+            index: 0,
+            size:'',
+            color:'',
+            quantity:'1',
+            stock:'',
+            username: 'Guest'
         }
     }
 
@@ -21,8 +29,9 @@ class detailProduct extends Component {
         this.setState({
             productItem: await this.getItem()
         })
-    }
 
+
+    }
 
     getItem = async () => {
         let id = this.props.match.params.id;
@@ -35,10 +44,44 @@ class detailProduct extends Component {
             index: i
         })
     }
+
+    getSize=(size)=>{
+        this.setState({
+            size:size
+        })
+    }
+    getColor=(color)=>{
+        this.setState({
+            color:color
+        })
+    }
+    getQuantity=(quantity)=>{
+        this.setState({
+            quantity:quantity
+        })
+    }
+
+    submit =()=>{
+        let objCart={
+            "username": this.state.username,
+            "color": this.state.color,
+            "size": this.state.size,
+            "quantity": this.state.quantity,
+            "name": this.state.productItem[0].name,
+            "price": this.state.productItem[0].price,
+            "product": this.state.productItem[0]._id,
+            "image": this.state.productItem[0].image[0]
+
+        };
+        console.log(objCart);
+        carthelper.storeCart(objCart);
+    }
     render() {
+        console.log(this.state.quantity);
         const { productItem,index } = this.state;
         const product = productItem && productItem[0];
         let color =[];
+
         product.product&&product.product.map((item,i)=>{
             color.push(item.color);
         })
@@ -68,11 +111,14 @@ class detailProduct extends Component {
                         <p className="title">{product.name}</p>
                         <p>${product.price}</p>
                         <StarRate></StarRate>
-                        <SelectSize></SelectSize>
-                        <Color color={color}></Color>
-                        <Quantity></Quantity>
+                        <SelectSize getSize ={this.getSize}></SelectSize>
+                        <Color getColor={this.getColor} color={color}></Color>
+                        <span className="float-left mt-4 mr-5" style={{ fontWeight: 'bold' }}>Quantity</span>
+                        <Quantity detail={1} quantity={1} getQuantity ={this.getQuantity}></Quantity>
                         <div className="add-product">
-                            <button className="btn btn-primary">Add to cart</button>
+                            <Link to ={"/cart/"+this.state.username}>
+                            <button type="submit" onClick ={this.submit} className="btn btn-primary">Add to cart</button>
+                            </Link>
                         </div>
                         <hr></hr>
                     </div>
@@ -81,9 +127,5 @@ class detailProduct extends Component {
         );
     }
 }
-const mapStateToProps = (state, ownProps) => {
-    return {
-        demo: state.product
-    }
-}
-export default connect(mapStateToProps,null)(detailProduct);
+
+export default detailProduct;

@@ -33,3 +33,9 @@
 - display detait product
 ### 25/02/2020
 - set up redux
+### 26/02/2020
+- complete function detail product
+### 27/02/2020
+- display cart and store product in cart into DB
+### 28/02/2020
+- Implement function for cart page
