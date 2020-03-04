@@ -39,3 +39,9 @@
 - display cart and store product in cart into DB
 ### 28/02/2020
 - Implement function for cart page
+### 02/03/2020
+- complete cart page
+- calculate total price
+- remove product in cart
+### 03/03/2020
+- use redux for cart page
