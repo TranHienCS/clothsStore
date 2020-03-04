@@ -12,7 +12,11 @@ const clothSchema = mongoose.Schema({
     dateAdd: Date,
     rate: Number,
     comment: [String],
-    description: String
-})
+    description: String, 
+    
+},{
+    collection: 'clothes'
+  }
+)
 
 module.exports = mongoose.model('Cloth', clothSchema);

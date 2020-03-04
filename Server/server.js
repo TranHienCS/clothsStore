@@ -1,20 +1,24 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 const PORT = 4000;
 const app = express();
-const businessRoute = require('./route/businessRoute');
+const initAPIs = require("./route/businessRoute.js");
+// const businessRoute = require('./route/businessRoute');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://127.0.0.1/users').then(
+mongoose.connect(process.env.URL_DB,{ useNewUrlParser: true }).then(
     () => {console.log('Database is connected') },
     err => { console.log('Can not connect to the database'+ err)}
   );
-
-// app.use(bodyParser.urlencoded({extended: true}));
-// app.use(bodyParser.json());
-app.use('/',businessRoute);
+  
 app.use(cors());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+initAPIs(app);
+// app.use('/',businessRoute);
 
 
 app.listen(PORT, function(){
