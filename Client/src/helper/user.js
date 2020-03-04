@@ -3,8 +3,7 @@ const URL = 'http://localhost:4000/';
 const helper ={
     sentInfoResgiter(objinfo){
         return axios.post(URL+'register',objinfo)
-            .then(res=>{
-                return res.data})
+            .then(res=>(res.data))
             .catch(()=>console.log("error"))
     },
     getAllProduct(){
@@ -14,7 +13,7 @@ const helper ={
     getProductById(objId){
         return axios.post(URL+'searchById',objId)
             .then(res=>{return res.data})
-            .catch(()=>console.lot("Search by id error"))
+            .catch(()=>console.log("Search by id error"))
     }
 }
 

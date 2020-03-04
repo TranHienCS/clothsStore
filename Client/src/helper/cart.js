@@ -15,7 +15,20 @@ const carthelper ={
         return axios.delete(URL+'deleteitembyid',{data:id})
             .then(res=>res.data)
             .catch(()=> console.log("can't remove item"))
+    },
+
+    getAllinCart(){
+        return axios.get(URL+'getallcart')
+        .then(res=>res.data)
+        .catch(()=>console.log("get error"))
+    },
+
+    updateQuantity(objidquantity){
+        return axios.post(URL+'updatequantity',objidquantity)
+        .then(res=>res.data)
+        .catch(()=>console.log("update error"))
     }
+
 }
 
 export default carthelper;

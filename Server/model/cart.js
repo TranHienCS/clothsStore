@@ -7,6 +7,7 @@ const cartSchema = mongoose.Schema({
     price:Number,
     image: String,
     name: String,
+    priceItem: Number,
     products: {type: mongoose.Schema.Types.ObjectId, ref: 'clothes'}
 },{
     collection: 'cart'

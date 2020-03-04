@@ -2,6 +2,7 @@
     width: 85%;
     margin: auto;
     margin-top: 20px;
+    min-height: 400px;
 }
 
 .table-product{

@@ -10,6 +10,7 @@ import Quantity from './selectQuantity.js';
 import {Link} from 'react-router-dom';
 import carthelper from '../../helper/cart.js';
 import cart from '../cart/cart';
+import {AddProductIntoCart} from '../../actions/cartAction.js';
 class detailProduct extends Component {
     constructor(props) {
         super(props);
@@ -61,7 +62,7 @@ class detailProduct extends Component {
         })
     }
 
-    submit =()=>{
+    submit =async ()=>{
         let objCart={
             "username": this.state.username,
             "color": this.state.color,
@@ -70,14 +71,13 @@ class detailProduct extends Component {
             "name": this.state.productItem[0].name,
             "price": this.state.productItem[0].price,
             "product": this.state.productItem[0]._id,
-            "image": this.state.productItem[0].image[0]
-
+            "image": this.state.productItem[0].image[0],
+            "priceItem": this.state.productItem[0].price*this.state.quantity
         };
-        console.log(objCart);
-        carthelper.storeCart(objCart);
+        // await carthelper.storeCart(objCart);
+        await this.props.AddProductIntoCart(objCart);
     }
     render() {
-        console.log(this.state.quantity);
         const { productItem,index } = this.state;
         const product = productItem && productItem[0];
         let color =[];
@@ -128,4 +128,11 @@ class detailProduct extends Component {
     }
 }
 
-export default detailProduct;
+const mapDispatchToProps = dispatch =>( {
+   
+        AddProductIntoCart: (data) => {
+            (AddProductIntoCart(data)(dispatch))
+        }
+    
+})
+export default connect(null,mapDispatchToProps)(detailProduct);

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './register-login.css'
 import FormError from './formError.js';
 import userhelper from '../../helper/user.js';
+import {Link} from 'react-router-dom';
 class register extends Component {
 
   constructor(props) {
@@ -21,8 +22,7 @@ class register extends Component {
         value: '',
         isInputValid: true,
         errorMessage: ''
-      },
-      isPrevent: false
+      }
     }
   };
 
@@ -30,18 +30,18 @@ class register extends Component {
     const {name} = this.state;
     const {mail} = this.state;
     const {password} = this.state;
-    // e.preventDefault();
     let nameEl = document.getElementsByClassName('form-control name')[0].value;
-    console.log(nameEl);
-
+    let ePrevent = true;
+    e.preventDefault();
     if (nameEl.length >= 2) {
       this.setState({
         name: {
-          value: name,
+          value: nameEl,
           isInputValid: true,
         }
       })
     } else{
+      ePrevent=false;
       this.setState({
         name:{
           isInputValid: false,
@@ -52,13 +52,14 @@ class register extends Component {
     let mailEl = document.getElementsByClassName('form-control mail')[0].value;
     let regexMail = new RegExp("[^@]+@[^\.]+\..+")
     if (regexMail.test(mailEl)) {
-      console.log("regex");
       this.setState({
-        mail:{value: mail,
+        mail:{value: mailEl,
         isInputValid: true,
         }
       })
-    } else{this.setState({
+    } else{
+      ePrevent=false;
+      this.setState({
       mail:{isInputValid: false,
             errorMessage: 'Please enter valid mail'}
     })}
@@ -70,17 +71,18 @@ class register extends Component {
         }
       })
     } else{
+      ePrevent=false;
       this.setState({
         password:{isInputValid:false,
         errorMessage: 'Your password must be more than 6 character'}
       })
     }
-    if(name.isInputValid||mail.isInputValid||password.isInputValid){
-      console.log("true");
-      e.preventDefault();
+    if(ePrevent){
+      let sendinfo =await userhelper.sentInfoResgiter({name:nameEl,email:mailEl,password:pass});
+      if(sendinfo.status){
+        window.location.reload();
+      }
     }
-
-    let sendinfo =await userhelper.sentInfoResgiter({name:name.value,mail:mail.value,pass:password.value})
 }
 
   render() {
@@ -105,7 +107,7 @@ class register extends Component {
                 </h1>
 
                 <div className="info">
-                  <form className="rsform">
+                  <form className="rsform" onSubmit={this.validation}>
                     <div className="form-group">
                       <label>NAME</label>
                       <input type="text" className="form-control name" placeholder="Enter your name..." />
@@ -127,7 +129,7 @@ class register extends Component {
                     <p className="policy">
                       By creating an account you agree to the<br></br><a href="#a">Terms of Service</a> and <a href="#a">Privacy Policy</a>
                     </p>
-                    <button className="registerbtn" type="submit" onClick={this.validation}>Register</button>
+                    <button className="registerbtn" type="submit">Register</button>
                     <div className="ptext">
                       <p className="isLogin">
                         Do you have an account? <a href="#a">Log In</a>

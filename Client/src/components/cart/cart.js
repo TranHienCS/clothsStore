@@ -3,36 +3,40 @@ import './cart.css';
 import carthelper from '../../helper/cart.js';
 import get from 'lodash/get';
 import Item from './item.js';
+import {connect} from 'react-redux';
+import {test} from '../../actions/cartAction.js';
 class cart extends Component {
     constructor(props){
         super(props);
         this.state={
-            allitem:[],
-            quantity:1
+            quantity:1,
+            username: this.props.match.params.slug,
+            totalprice: 0
         }
     }
   
     async componentDidMount (){
-        let username = this.props.match.params.slug;
-        let allitem = await carthelper.getCart({"username":username});
-        console.log(allitem)
-        this.setState({allitem})
+        // let allitem = await carthelper.getCart({"username":this.state.username});
+        // this.setState({allitem})
     }
 
-    remove =(index)=>{
-        this.state.allitem.splice(index,1)
+    remove = async ()=>{
+        // let allitem = await carthelper.getCart({"username":this.state.username});
         this.setState({
-            allitem: this.state.allitem
+            allitem:this.props.allitem
         })
+    // }
+    //  numberitem= (testitem)=>{
+    //     return testitem
     }
+    
     render() {
-        const {allitem}= this.state;
-        
-        
+        const {allitem,totalprice}= this.props;
+     
         return (
             <div>
             <div className ="cart-c">
-                <div>My Bag</div>
+                <div style ={{fontSize:'24px', fontWeight:'bold',margin: '30px'}}>My Bag</div>
                 <div className="table-product">
                     <table className="table">
                         <thead>
@@ -45,8 +49,10 @@ class cart extends Component {
                         </tr>
                         </thead>
                         <tbody>
-                            {allitem.length&&allitem.map((item,i)=>(
-                                 <Item key ={i}
+                            {allitem.length&&allitem.map((item,i)=>{
+                                // console.log(allitem);
+                                // console.log("quantity"+item.quantity);
+                                 return <Item key ={i}
                                  removeItem = {this.remove}
                                  image = {item.image}
                                  title = {item.name}
@@ -58,7 +64,7 @@ class cart extends Component {
                                  index = {i}
                              >
                              </Item>
-                            )
+                            }
                             )}
                         </tbody>
                     </table>
@@ -67,18 +73,32 @@ class cart extends Component {
                     <span style={{fontSize:'16px',fontWeight:'bold'}}>Total</span>
                     <div className="boxPrice">
                        <p><span>Shipping & Handling</span><span className="float-right">Free</span></p>
-                       <p><span>Total Product</span><span className="float-right">$111</span></p>
+                       <p><span>Total Product</span><span className="float-right">${totalprice}</span></p>
                        <hr></hr>
-                       <p style={{marginBottom:'0'}}><span>SubTotal</span><span className="float-right">$5555</span></p>
+                       <p style={{marginBottom:'0'}}><span>SubTotal</span><span className="float-right">${totalprice}</span></p>
                      
                     </div>
-                    <button className="btn-checkout">Check out</button>
+                    <button onClick={this.submit} className="btn-checkout">Check out</button>
                     </div>
-               
             </div>
             </div>
         );
     }
 }
 
-export default cart;
+const mapStateToProps = (state) => {
+    return {
+        allitem: state.cart.product,
+        totalprice: state.cart.totalprice,
+        testitem: state.cart.number
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        test: () => {
+            dispatch(test())
+        }
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(cart);
