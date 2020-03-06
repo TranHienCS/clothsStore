@@ -23,25 +23,29 @@
 - Completed product list page
 - understand git flow (push, pull request, merge)
 - set up router by react-router-dom
-### 20/02/2020
+#### 20/02/2020
 - add data to Mongodb
 - Getdata by Nodejs
-### 21/02/2020
+#### 21/02/2020
 - get data from back-end to front-end
 - completed product-list page
-### 24/02/2020
+#### 24/02/2020
 - display detait product
-### 25/02/2020
+#### 25/02/2020
 - set up redux
-### 26/02/2020
+#### 26/02/2020
 - complete function detail product
-### 27/02/2020
+#### 27/02/2020
 - display cart and store product in cart into DB
-### 28/02/2020
+#### 28/02/2020
 - Implement function for cart page
-### 02/03/2020
+#### 02/03/2020
 - complete cart page
 - calculate total price
 - remove product in cart
-### 03/03/2020
+#### 03/03/2020
 - use redux for cart page
+#### 04/03/2020
+- Use JWT in server
+#### 05/06/2020
+- Update login-logout-register
