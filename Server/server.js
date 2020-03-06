@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 const PORT = 4000;
 const app = express();
 const initAPIs = require("./route/businessRoute.js");
+require('dotenv').config();
 // const businessRoute = require('./route/businessRoute');
-
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.URL_DB,{ useNewUrlParser: true }).then(
     () => {console.log('Database is connected') },

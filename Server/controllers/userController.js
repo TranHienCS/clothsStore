@@ -22,6 +22,7 @@ export default class userController{
         try{
             const finduser = await User.findOne({email:email});
             if (finduser){
+                console.log(finduser);
                 return res.status(403).json({error:'Email is already in use'});
             }
             const hashPass = await bcrypt.hash(password,process.env.SALT);

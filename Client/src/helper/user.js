@@ -6,6 +6,11 @@ const helper ={
             .then(res=>(res.data))
             .catch(()=>console.log("error"))
     },
+    sentInfoLogin(objinfo){
+        return axios.post(URL+'login',objinfo)
+        .then(res=>res.data)
+        .catch((err)=>console.log("mjjn "+err))
+    },
     getAllProduct(){
         return axios.get(URL+'products')
             .then(respones=>{return respones.data;})

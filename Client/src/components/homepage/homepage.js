@@ -12,10 +12,10 @@ class homepage extends Component {
                     
                     </div>
                     <div className="row categorypic">
-                    <Categorypic className="pic1" category="Ladies"></Categorypic>
-                    <Categorypic className="pic2" category="Man"></Categorypic>
-                    <Categorypic className="pic3" category="Boys"></Categorypic>
-                    <Categorypic className="pic4" category="Girls"></Categorypic>
+                    <Categorypic className="pic1" category="Ladies" cate = "ladies"></Categorypic>
+                    <Categorypic className="pic2" category="Man" cate="man"></Categorypic>
+                    <Categorypic className="pic3" category="Girls" cate="girl"></Categorypic>
+                    <Categorypic className="pic4" category="Boys"cate = "boy"></Categorypic>
                     </div>
                     <div>
                     </div>

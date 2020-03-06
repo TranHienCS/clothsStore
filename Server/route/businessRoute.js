@@ -18,14 +18,15 @@ let initAPIs = (app) => {
     // router.get("/example-protect-api", ExampleController.someAction);
     return app.use("/", businessRoutes);
   }
+  businessRoutes.post('/register',AuthController.register);
+// businessRoutes.route('/register').post((req,res)=>{
+//     let infoRegister=new user(req.body);
+//     infoRegister.save()
+//     .then(() => res.status(200).json({ 'status': 'true', 'message': 'user in added successfully' }))
+//     .catch(() => res.status(400).json({ 'status': 'false', 'message': 'user not added successfully' }))
+//     console.log(infoRegister);
+// })
 
-businessRoutes.route('/register').post((req,res)=>{
-    let infoRegister=new user(req.body);
-    infoRegister.save()
-    .then(() => res.status(200).json({ 'status': 'true', 'message': 'user in added successfully' }))
-    .catch(() => res.status(400).json({ 'status': 'false', 'message': 'user not added successfully' }))
-    console.log(infoRegister);
-})
 
 businessRoutes.route('/products').get(async(req,res)=>{
     let allitems = await clothes.find({},(err,docs)=>docs);

@@ -10,6 +10,7 @@ const clothSchema = mongoose.Schema({
     brand: String,
     sex: String,
     dateAdd: Date,
+    category:String,
     rate: Number,
     comment: [String],
     description: String, 

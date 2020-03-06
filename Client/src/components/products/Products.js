@@ -8,15 +8,28 @@ class Products extends Component {
     constructor(props){
         super(props);
         this.state={
-            allProduct:[]
+            allProduct:[],
+            categoryItem:[],
         }
     }
     async componentDidMount(){
-        this.setState({allProduct:await helper.getAllProduct()});
+        let allProduct = await helper.getAllProduct();
+        let categoryItem = allProduct.filter(item=>item.category==this.props.match.params.slug);
+        this.setState({
+            allProduct,
+            categoryItem
+        });
+    }
+    componentWillReceiveProps(nextProps){
+        if(nextProps.match.params.slug!=this.props.match.params.slug){
+            console.log(nextProps.match.params.slug);
+            this.setState({categoryItem:this.state.allProduct.filter(item=>item.category==nextProps.match.params.slug)});
+        }
     }
     render() {
-        const {allProduct} =this.state;
-        const cardProduct = allProduct[0] && allProduct.map((row,i)=>{
+    
+        const {allProduct,categoryItem} =this.state;
+        const cardProduct = categoryItem[0] && categoryItem.map((row,i)=>{
             return <Link to ={"/product/detail/"+row._id}><ProductCard
                 imageURL = {row.image[0]}
                 name = {row.name}

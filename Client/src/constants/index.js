@@ -6,3 +6,5 @@ export const REMOVE_PRODUCT_IN_CART = 'Remove_Product_In_Cart';
 export const INCREASE_QUANTITY = 'Increase_Quantity';
 export const DECREASE_QUANTITY = 'Decrease_Quantity';
 export const TEST ='Test';
+export const POST_LOGIN = 'Post_Login';
+export const LOG_OUT = "Log Out"
