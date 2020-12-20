@@ -14,6 +14,7 @@
 }
 .align-self-end{
     padding:0 !important;
+    margin-bottom: 6px;
 }
 .btn{
     padding:0 !important;
@@ -33,6 +34,8 @@
     size: 24px;
     line-height: 33px;
     margin-top: 10px;
+    cursor: pointer;
+    color: black;
 }
 .category{
     padding-top: 8px;
@@ -58,5 +61,20 @@
     /* float: right; */
     border:none;
     background-color: white;
-
+}
+.total-product {
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    background-color: #E5704B;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 14px;
+    left: 45px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
