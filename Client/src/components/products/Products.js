@@ -3,12 +3,13 @@ import ProductCard from './productCard/productCard.js';
 import './products.css'
 import helper from '../../helper/user.js';
 import {Link} from "react-router-dom";
+const allProduct = require('../../allProduct')
 class Products extends Component {
 
     constructor(props){
         super(props);
         this.state={
-            allProduct:[]
+            allProduct: allProduct
         }
     }
     async componentDidMount(){
@@ -17,13 +18,13 @@ class Products extends Component {
     render() {
         const {allProduct} =this.state;
         const cardProduct = allProduct[0] && allProduct.map((row,i)=>{
-            return <Link to ={"/product/detail/"+row._id}><ProductCard
+            return <ProductCard
                 imageURL = {row.image[0]}
                 name = {row.name}
                 price ={row.price}
-                key ={i}>
-            </ProductCard>
-            </Link>
+                key ={i}
+                _id = {row._id}
+                />
             })
 
         return (

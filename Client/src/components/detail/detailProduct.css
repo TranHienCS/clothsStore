@@ -9,7 +9,7 @@
 
 .product-img{
     width:500px;
-    height: 100%;
+    height: 70%;
 }
 
 .product-img img {
@@ -24,16 +24,23 @@
 .detail{
     margin-left: 60px;
 }
-
+.text-review {
+    font-size: 12px;
+    color: #A9A9A9;
+    margin-left: 5px;
+    margin-top: 3px;
+    text-decoration: underline;
+}
 .title{
     font-size:24px;
     margin-bottom: 0 !important;
 }
 .fa-star{
     color: rgb(206, 206, 206);
+    margin-left: 3px;
 }
 .checked{
-    color: rgb(216, 216, 32)
+    color: #151515;
 }
 
 .btn-size{
@@ -106,3 +113,93 @@ img[src=''] {
     display: none;
     visibility: hidden;
  }
+.product-description {
+    margin-top: 32px;
+}
+.row-description{
+    display: flex;
+    flex-direction: row;
+}
+.property {
+    width: 100px !important;
+    font-size: 14px;
+    color: #A9A9A9;
+}
+.value-property {
+    width: 120px;
+    font-size: 14px;
+    color: #151515;
+}
+.price-product {
+    width: 470px;
+    height: 79px;
+    border-radius: 14px;
+    background-color: #f5f2eb;
+    border: 1px solid #F5F5F5;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+.price-product .price {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+.current-price {
+    font-size: 23px;
+    color: #6A983C;
+    font-weight: bold;
+    margin-bottom: 0!important;
+}
+.real-price {
+    font-size: 12px;
+    color: #A9A9A9;
+    text-decoration: line-through;
+}
+.amount {
+    width: 41px;
+    height: 47px;
+    border-radius: 12px;
+    background-color: #F9F9F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-cart-btn {
+    width: 120px;
+    height: 40px;
+    background-color: #6A983C;
+    color: white;
+    font-size: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #46760A;
+    margin-left: 40px;
+    cursor: pointer;
+    margin-top: 3px;
+    font-weight: bold;
+    margin-left: auto;
+}
+.promotion {
+    display: flex;
+    flex-direction: row; 
+    font-size: 12px;
+    color: #6A983C;
+    position: absolute;
+    top: 170px;
+    left: 220px;
+    font-weight: bold;
+}
+.panel-discount {
+   width: 59px;
+   height: 26px;
+    background-color: #F4F8EC;
+    margin-left: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}

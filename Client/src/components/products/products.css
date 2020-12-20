@@ -11,9 +11,9 @@
 }
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto;
     grid-gap: 15px; 
-    grid-template-rows: 350px
+    /* grid-template-rows: 350px */
   }
 
   .list-cate{
@@ -27,4 +27,20 @@
 
   a {
     text-decoration: none !important;
-}
+  }
+  .order-button{
+    width: 63px;
+    height: 30px;
+    position: absolute;
+    background-color: #6A983C;
+    font-size: 13px;
+    bottom: 16px;
+    right: 16px;
+    border-radius: 8px;
+    border: 2px solid #46760A;
+    text-align: center;
+    padding-top: 3px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
